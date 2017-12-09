@@ -1,0 +1,17 @@
+{
+  "name": "samibot",
+  "version": "0.0.1",
+  "description": "Simppeli Samibotti Sääjuttuihin",
+  "main": "index.js",
+  "dependencies": {
+    "botpress": "1.x",
+    "botpress-messenger": "^2.2.9",
+    "botpress-web": "1.x"
+  },
+  "scripts": {
+    "start": "botpress start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dropa",
+  "license": "Botpress Proprietary License"
+}
