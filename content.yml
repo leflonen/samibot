@@ -1,18 +1,24 @@
-welcome: # this is the #welcome bloc referenced in index.js
+welhei: 
   - typing: true
-    text: # Picks one randomly
-      - Hey there!
-      - Hello {{user.first_name}}
-      - Good day :)
-  - text: This is just a regular Hello World, I don't do anything ;)
+    text: 
+      - Moro!
+      - Moro {{user.first_name}}!
+      - Kato {{user.first_name}}!
+  - text: 
+      - Mitäs, maistuisko säätieto?
+      - Tääl on ihan jees keli, mites siel, pitäskö kattoo?
+      - Mis äijä menee?
     typing: 2s
-  - text: Make sure to check out the 'index.js' file to see how I work
-    typing: true
-  - wait: 5s
-  - text: You can say goodbye now
-    typing: 1s
+    quick_replies:
+      - content_type: location
+        title: location
 
-goodbye:
-  - text: You are leaving because of reason {{reason}}
+welhej:
+  - text: Ei täällä nyt ¤"%#& mitään ruottia puhuta
     typing: true
-  - Hope to see you back again soon! # if no other properties, you can just send a strings
+
+where_location:
+  - |
+    Katotaas..
+    Latitude: {{coordinates.lat}}
+    Longitude: {{coordinates.long}}
