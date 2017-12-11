@@ -1,3 +1,4 @@
+const str = require('./data/pass');
 module.exports = {
   /*
     Where the content is stored
@@ -47,9 +48,9 @@ module.exports = {
     Access control of admin panel
   */
   login: {
-    enabled: process.env.NODE_ENV === 'production',
+    enabled: true,
     tokenExpiry: '6 hours',
-    password: process.env.BOTPRESS_PASSWORD || 'password',
+    password: str.pass(),
     maxAttempts: 3,
     resetAfter: 10 * 60 * 1000 // 10 minutes
   },
