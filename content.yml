@@ -1,33 +1,27 @@
-start:
+startConvo:
   - typing: 0.5s
     text:
-      - Tervetulloo, normaalisti alotellaan tervehtimällä
-      - Elikkäs homman nimi on, että eka morotetaan
-      - Kokeile vaikka sanoo jotain
+      - Moro {{user.first_name}}! Mitäs, vitsiä vai sääinffoo?
+      - Moro {{user.first_name}}! Tääl on jees keli, mitäs laitettas?
+      - Moro {{user.first_name}}! Haluutsä hasun vitsin vai katonko kristallipalloon ja ennustan sään?
+    quick_replies:
+      - <.B1> Vitsi
+      - <.B2> Säätä
 
-welhei: 
+getLocation:
   - typing: 0.5s
-    text: 
-      - Moro!
-      - Moro {{user.first_name}}!
-      - Kato {{user.first_name}}!
-      - Ei juku, sehän on {{user.first_name}}!
-      - Itte {{user.first_name}} saapu!
-      - {{user.first_name}} in da house!!
-      - Päevää että pätkähti sullekki {{user.first_name}}
-  - typing: 0.5s
-    text: 
-      - Onko kelejä pidelly?
-      - Tääl on perhanan pimeetä ja kylmä, mites siel?
-      - Mitäs, maistuisko säätieto?
-      - Tääl on ihan jees keli, mites siel, pitäskö kattoo?
-      - Mis äijä menee?
-  - wait: 0.5s
-  - text: 
+    text:
       - Paina tost ni tsekkaillaan
-      - Napist saadaan katottuu sunki säätieto
-      - Heitä joku sijainti
-      - Säätietoja sinnekin
+    quick_replies:
+      - content_type: location
+        title: location
+
+welhei:
+  - typing: 0.5s
+    text:
+      - No sit tarttis vähäC sun sijaintia sillee
+      - Annappas sit sijaintis. Ei yhtää välitetä tätä kiinalaisille tai mitää.
+      - Annappa sit sijainti. Täysin turvallista ja pakollista!
     quick_replies:
       - content_type: location
         title: location
@@ -43,7 +37,14 @@ where_location:
     lämpöö siel on tollaset {{obj.temp}} astetta.
     Kosteutta ois sellaset {{obj.humidity}} rossaa
     ja tuultaki {{obj.wind}} metrii sekas.
-    
+
+jokeResponse:
+    - typing: 0.5s
+      text:
+        - |
+          {{ joke }}
+      wait: 0.5s
+
 wat:
   - text:
     - Ekkö sää osaa edes morottaa
@@ -52,9 +53,3 @@ wat:
     - Ei ummarra
     - Höhö.
     - Nääh, kokeile uusiks.
-    - Oispa kaljaa
-    - Toisinaan mietin, onko mitään järkeä puhua botille, joka ei kuitenkaan ymmärrä hölkäsen pölähtävää siitä mitä itte sille koittaa selittää. Luulis nyt vähemmänki turhauttavan ku ei saa mitään järkevää pihalle, mutta siitähän me ei toisaalta välitetä, vai mitä?
-    - ...
-    - Pft, koitas ny
-    - {{user.first_name}}, yritä ny ees
-    - No voi ny. Sano vaikka 'moro'
