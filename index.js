@@ -1,6 +1,10 @@
 
 module.exports = function(bp) {
 
+  bp.hear(/GET_STARTED/i, (event, next) => {
+  event.reply('#start')
+})
+
   bp.hear(/GET_STARTED|mo|moro|moron|moi|hei/i, (event, next) => {
     event.reply('#startConvo')
   })
@@ -38,12 +42,10 @@ module.exports = function(bp) {
     event.reply('#welhej')
   })
 
-
-
   bp.hear({ type: 'location' }, (event, next) => {
-    let http = require('http');
+    var http = require('http');
 
-    let opt = {
+    var opt = {
       host: 'api.openweathermap.org',
       pre: "/data/2.5/weather",
       lat: "?lat=" + event.raw.payload.coordinates.lat,
@@ -52,20 +54,20 @@ module.exports = function(bp) {
       lang: "&lang=fi",
       unit: "&units=metric"
     };
-    let options = {
+    var options = {
       host: opt.host,
       path: opt.pre + opt.lat + opt.lon + opt.lang + opt.unit + opt.app,
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     };
-    let toparse = '';
+    var toparse = '';
     callback = function(response) {
         response.on('data', function (chunk) {
           toparse += chunk
         });
         response.on('end', function () {
-          let json = JSON.parse(toparse);
-          let obj = {
+          var json = JSON.parse(toparse);
+          var obj = {
           	name: json.name,
           	des: json.weather[0].description,
           	temp: json.main.temp,
