@@ -1,5 +1,5 @@
 welhei: 
-  - typing: true
+  - typing: 0.5s
     text: 
       - Moro!
       - Moro {{user.first_name}}!
@@ -8,7 +8,10 @@ welhei:
       - Mitäs, maistuisko säätieto?
       - Tääl on ihan jees keli, mites siel, pitäskö kattoo?
       - Mis äijä menee?
-    typing: 2s
+    typing: 0.5s
+  - wait: 0.5s
+  - text: 
+      - Paina tost ni tsekkaillaan
     quick_replies:
       - content_type: location
         title: location
@@ -19,6 +22,17 @@ welhej:
 
 where_location:
   - |
-    Katotaas..
-    Latitude: {{coordinates.lat}}
-    Longitude: {{coordinates.long}}
+    Elikkäs sää mestassa {{obj.name}}:
+    Mieleen tulee lähinnä {{obj.des}},
+    lämpöö siel on tollaset {{obj.temp}} astetta.
+    Kosteutta ois sellaset {{obj.humidity}} rossaa
+    ja tuultaki {{obj.wind}} metrii sekas.
+    
+wat:
+  - text:
+    - Ekkö sää osaa edes morottaa
+    - Kokeileppa toinen
+    - No mutta {{user.first_name}}!
+    - Ei ummarra
+    - Höhö.
+    - Nääh, kokeile uusiks.

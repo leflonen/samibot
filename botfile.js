@@ -1,4 +1,4 @@
-const str = require('./data/pass');
+const stra = require('./data/pass');
 module.exports = {
   /*
     Where the content is stored
@@ -50,7 +50,7 @@ module.exports = {
   login: {
     enabled: true,
     tokenExpiry: '6 hours',
-    password: str.pass(),
+    password: stra.pass(),
     maxAttempts: 3,
     resetAfter: 10 * 60 * 1000 // 10 minutes
   },
