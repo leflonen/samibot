@@ -11,14 +11,13 @@ module.exports = function(bp) {
 
   bp.hear({ type: 'location' }, (event, next) => {
     var http = require('http');
-    var stra = require('./data/pass');
 
     var opt = {
       host: 'api.openweathermap.org',
       pre: "/data/2.5/weather",
       lat: "?lat=" + event.raw.payload.coordinates.lat,
       lon: "&lon=" + event.raw.payload.coordinates.long,
-      app: "&appid=" + stra.ow(),
+      app: "&appid=" + process.env.OPENWEATHER_KEY,
       lang: "&lang=fi",
       unit: "&units=metric"
     };
