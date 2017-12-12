@@ -1,3 +1,10 @@
+start:
+  - typing: 0.5s
+    text:
+      - Tervetulloo, normaalisti alotellaan tervehtimällä
+      - Elikkäs homman nimi on, että eka morotetaan
+      - Kokeile vaikka sanoo jotain
+
 startConvo:
   - typing: 0.5s
     text:
@@ -16,15 +23,6 @@ getLocation:
       - content_type: location
         title: location
 
-welhei:
-  - typing: 0.5s
-    text:
-      - No sit tarttis vähäC sun sijaintia sillee
-      - Annappas sit sijaintis. Ei yhtää välitetä tätä kiinalaisille tai mitää.
-      - Annappa sit sijainti. Täysin turvallista ja pakollista!
-    quick_replies:
-      - content_type: location
-        title: location
 
 welhej:
   - text: Ei täällä nyt ¤"%#& mitään ruottia puhuta
@@ -53,3 +51,9 @@ wat:
     - Ei ummarra
     - Höhö.
     - Nääh, kokeile uusiks.
+    - Oispa kaljaa
+    - Toisinaan mietin, onko mitään järkeä puhua botille, joka ei kuitenkaan ymmärrä hölkäsen pölähtävää siitä mitä itte sille koittaa selittää. Luulis nyt vähemmänki turhauttavan ku ei saa mitään järkevää pihalle, mutta siitähän me ei toisaalta välitetä, vai mitä?
+    - ...
+    - Pft, koitas ny
+    - {{user.first_name}}, yritä ny ees
+    - No voi ny. Sano vaikka 'moro'
