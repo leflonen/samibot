@@ -11,7 +11,7 @@
 # verifyToken: "" # MESSENGER_VERIFY_TOKEN
 
 # displayGetStarted: true
-# greetingMessage: ""
+# greetingMessage: "Kokeileppa morottaa"
 
 # https://developers.facebook.com/docs/messenger-platform/messenger-profile/persistent-menu
 # persistentMenuItems: []
@@ -21,7 +21,7 @@
 # targetAudienceCloseToSome: ""
 
 # trustedDomains: []
-# autoRespondGetStarted: true
+# autoRespondGetStarted: false
 
 # paymentTesters: []
 

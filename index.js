@@ -1,7 +1,11 @@
 
 module.exports = function(bp) {
 
-  bp.hear(/GET_STARTED|mo|moro|moron|moi|hei/i, (event, next) => {
+  bp.hear(/GET_STARTED/i, (event, next) => {
+    event.reply('#start')
+  })
+
+  bp.hear(/mo|moro|moron|moi|hei/i, (event, next) => {
     event.reply('#welhei')
   })
 
